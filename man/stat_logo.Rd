@@ -9,9 +9,17 @@
 \usage{
 StatLogo
 
-stat_logo(mapping = NULL, data = NULL, geom = "logo",
-  position = "logo", show.legend = NA, inherit.aes = TRUE,
-  width = 0.9, na.rm = TRUE, ...)
+stat_logo(
+  mapping = NULL,
+  data = NULL,
+  geom = "logo",
+  position = "logo",
+  show.legend = NA,
+  inherit.aes = TRUE,
+  width = 0.9,
+  na.rm = TRUE,
+  ...
+)
 }
 \arguments{
 \item{mapping}{The aesthetic mapping, usually constructed with aes or aes_string. Only needs to be set at the layer level if you are overriding the plot defaults.}
@@ -46,7 +54,7 @@ Calculation of all pieces necessary to plot a logo sequence plot
 data(sequences)
 library(ggplot2)
 
-ggplot(data = ggfortify(sequences, "peptide")) + 
+ggplot(data = ggfortify(sequences, peptide)) + 
   geom_logo(aes(x=position, y=bits, label=element, 
                 group=interaction(position, element)), 
             alpha=0.5)
